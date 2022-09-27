@@ -76,6 +76,7 @@ const TodoForm = ({ todoAdd, todoEdit, setTodoEdit, todoUpdate }) => {
       <h2 className="text-center display-4">
         {todoEdit ? "Editar tarea" : "Nueva tarea"}
       </h2>
+      {todoEdit && <p className="text-center">id: {todoEdit.id}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
