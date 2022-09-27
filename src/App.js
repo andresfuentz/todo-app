@@ -2,20 +2,7 @@ import React, { useState, useEffect } from "react";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 
-const initialTodos = [
-  {
-    id: 1,
-    title: "Todo #1",
-    description: "Desc del Todo #1",
-    completed: false,
-  },
-  {
-    id: 2,
-    title: "Todo #2",
-    description: "Desc del Todo #2",
-    completed: false,
-  },
-];
+const initialTodos = [];
 
 const localTodos = JSON.parse(localStorage.getItem("todos"));
 

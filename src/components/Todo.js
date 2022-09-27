@@ -10,7 +10,11 @@ const Todo = ({
   return (
     <div
       className={`card border ${
-        todo.completed ? "border-danger" : "border-success"
+        todo.completed
+          ? "border-danger"
+          : "border-success" && todoEdit
+          ? "border-primary"
+          : "border-success"
       } m-2`}
     >
       <div className="card-body">
