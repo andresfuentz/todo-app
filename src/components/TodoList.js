@@ -13,7 +13,7 @@ const TodoList = ({
       <h2 className="text-center display-4">Lista de tareas</h2>
 
       {todos.length === 0 ? (
-        <div className="alert alert-primary">
+        <div className="alert alert-primary m-2">
           No hay tareas. Por favor agrega una {":)"}
         </div>
       ) : (
