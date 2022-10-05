@@ -98,7 +98,7 @@ const TodoForm = ({ todoAdd, todoEdit, setTodoEdit, todoUpdate }) => {
         </button>
         {todoEdit && (
           <button
-            className="btn btn-warning w-100 m-2"
+            className="btn btn-warning w-100 mt-2"
             onClick={resetFormValuesAndTodoEdit}
           >
             Cancelar edición
