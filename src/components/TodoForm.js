@@ -77,37 +77,37 @@ const TodoForm = ({ todoAdd, todoEdit, setTodoEdit, todoUpdate }) => {
         {todoEdit ? "Editar tarea" : "Nueva tarea"}
       </h2>
       {todoEdit && <p className="text-center">id: {todoEdit.id}</p>}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="m-2">
         <input
           type="text"
           placeholder="Título"
-          className="form-control"
+          className="form-control mb-2"
           value={title}
           name="title"
           onChange={handleInputChange}
         />
         <textarea
           placeholder="Descripción"
-          className="form-control mt-2"
+          className="form-control mb-2"
           value={description}
           name="description"
           onChange={handleInputChange}
         />
-        <button className="btn btn-primary w-100 mt-2">
+        <button className="btn btn-primary w-100">
           {todoEdit ? "Actualizar tarea" : "Agregar tarea"}
         </button>
         {todoEdit && (
           <button
-            className="btn btn-warning w-100 mt-2"
+            className="btn btn-warning w-100 m-2"
             onClick={resetFormValuesAndTodoEdit}
           >
             Cancelar edición
           </button>
         )}
       </form>
-      {error && <div className="alert alert-danger mt-2">{error}</div>}
+      {error && <div className="alert alert-danger m-2">{error}</div>}
       {successMessage && (
-        <div className="alert alert-success mt-2">{successMessage}</div>
+        <div className="alert alert-success m-2">{successMessage}</div>
       )}
     </div>
   );

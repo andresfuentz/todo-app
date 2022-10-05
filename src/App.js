@@ -59,9 +59,9 @@ const App = () => {
   };
 
   return (
-    <div className="container mt-4">
-      <div className="row">
-        <div className="col-8">
+    <div className="row g-0">
+      <div className="col-8 g-0">
+        <div className="vh-100 w-100">
           <TodoList
             todos={todos}
             todoDelete={todoDelete}
@@ -70,7 +70,9 @@ const App = () => {
             setTodoEdit={setTodoEdit}
           />
         </div>
-        <div className="col-4">
+      </div>
+      <div className="col-4 g-0">
+        <div className="vh-100 w-100">
           <TodoForm
             todoAdd={todoAdd}
             todoEdit={todoEdit}

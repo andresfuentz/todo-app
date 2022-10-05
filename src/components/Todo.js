@@ -21,10 +21,10 @@ const Todo = ({
         <h3 className="card-title">{todo.title}</h3>
         <p className="card-text">{todo.description}</p>
         <hr />
-        <div className="d-flex justify-content-end">
+        <div className="d-md-flex justify-content-end">
           <button
             onClick={() => todoToggleComplete(todo.id)}
-            className="btn btn-sm btn-outline-success me-2"
+            className="btn btn-sm btn-outline-success m-2"
             disabled={todo.completed || todoEdit}
           >
             {todo.completed ? "Terminado" : "Terminar"}
@@ -32,7 +32,7 @@ const Todo = ({
           <button
             className={`btn btn-sm ${
               todoEdit ? "btn-primary" : "btn-outline-primary"
-            } me-2`}
+            } m-2`}
             onClick={() => setTodoEdit(todo)}
             disabled={todo.completed}
           >
@@ -41,7 +41,7 @@ const Todo = ({
           <button
             className={`btn btn-sm ${
               todo.completed ? "btn-danger" : "btn-outline-danger"
-            }`}
+            } m-2`}
             onClick={() => todoDelete(todo.id)}
             disabled={todoEdit}
           >
