@@ -29,15 +29,17 @@ const Todo = ({
           >
             {todo.completed ? "Terminado" : "Terminar"}
           </button>
-          <button
-            className={`btn btn-sm ${
-              todoEdit ? "btn-primary" : "btn-outline-primary"
-            } m-2`}
-            onClick={() => setTodoEdit(todo)}
-            disabled={todo.completed}
-          >
-            Editar
-          </button>
+          {!todo.completed && (
+            <button
+              className={`btn btn-sm ${
+                todoEdit ? "btn-primary" : "btn-outline-primary"
+              } m-2`}
+              onClick={() => setTodoEdit(todo)}
+              disabled={todo.completed}
+            >
+              Editar
+            </button>
+          )}
           <button
             className={`btn btn-sm ${
               todo.completed ? "btn-danger" : "btn-outline-danger"
